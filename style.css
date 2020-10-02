@@ -1,14 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 
 body {
-  display: flex;
-  flex-flow: column nowrap;
+
   line-height: 1.65;
   font-family: "Roboto", -apple-system, "Helvetica Neue", Helvetica, "Segoe UI",
     Arial, sans-serif;
-  min-height: 100%;
+  
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  overflow-x: hidden;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 body > section {
@@ -111,27 +113,29 @@ nav {
 
 /* colored cards section */
 
-#color_cards_section{
-    
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-
+#color_cards_section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
-#color_cards_section h2{
-    
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-
+#color_cards_section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 #color_cards,
 #tweets {
   display: flex;
   flex-flow: row nowrap;
-  overflow: clip;
-  animation: carousel 50s linear 0s infinite running;
+  justify-content: flex-end;
+  animation: carousel 30s linear 0s infinite running;
+  max-width: 100vw;
   transform: translate3d(0px, 0px, 0px);
+}
+
+#color_cards:hover,
+#tweets:hover {
+  animation-play-state: paused;
 }
 
 .cl_card {
@@ -211,27 +215,120 @@ nav {
 .screens {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: flex-start;
 }
 
 .screens section {
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 0;
 }
 
 .screens article {
   width: 50%;
+  margin: 0 4rem;
 }
 
-#map {
+.screen_img_div {
+  position: relative;
+}
+
+/* tweets section */
+
+#tweets_section {
   display: flex;
   flex-flow: column nowrap;
+  align-items: stretch;
+  text-align: center;
 }
+#tweets_section h2 {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+.tweet_card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 2rem;
+  padding: 1.5rem;
+  min-width: 20rem;
+  border-radius: 1rem;
+  box-shadow: rgba(25, 28, 31, 0.08) 0px 14px 32px,
+    rgba(25, 28, 31, 0.04) 0px 8px 16px, rgba(25, 28, 31, 0.04) 0px -1px 0px;
+}
+
+/* map section */
+
+#map_section {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 64rem;
+  align-items: center;
+}
+
+#map_section h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+#map_div{
+    max-width: 50rem;
+
+}
+#map{
+    width: 100%;
+    position: relative;
+}
+/* plans section */
 
 #plans {
   display: flex;
-  flex-flow: row nowrap;
-  transition: 0.5s all;
+  flex-flow: row;
+  transition:  background-color 0.5s ;
+  justify-content: space-between;
 }
+
+#plans > section{
+    width: 30%;
+    padding: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    justify-content: flex-start;
+
+}
+
+.plan_type{
+    font-size: 1rem;
+    font-weight: 100;
+    margin: 0
+    
+}
+
+.price{
+    font-size: 6.5rem;
+    display: flex;
+    font-weight: 200;
+    text-align: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.yen{
+    font-size: 3rem;
+    align-self: flex-start;
+
+}
+
+.per_month{
+    font-size: 3rem;
+    align-self: flex-end;
+}
+
 #plans section:hover {
   background: hsla(210, 11%, 11%, 0.08);
 }
@@ -241,17 +338,17 @@ nav {
 }
 .hover_div {
   visibility: hidden;
+  margin-top: auto;
+  margin-bottom: 2rem;
 }
+
+/* various */
 
 .screen_img {
   display: block;
   max-width: 350px;
   max-height: 600px;
   z-index: 1;
-}
-
-.screen_img_div {
-  position: relative;
 }
 
 .screen_img_div:not(#hero_img_div)::after {
@@ -357,10 +454,12 @@ li {
 .check_list {
   padding: 0.5rem 0px 0.5rem 2rem;
   position: relative;
+  text-align: left;
+  color: rgb(153, 154, 155);
 }
 
 @keyframes carousel {
   100% {
-    transform: translate3d(-100%, 0px, 0px);
+    transform: translate3d(50%, 0px, 0px);
   }
 }

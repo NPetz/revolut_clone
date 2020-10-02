@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
     <nav>
         <div id="navbar">
             <div id="logo">
@@ -60,7 +61,7 @@
 
     <section id="hero">
         <article id="hero_text">
-            <h1>Revolutのサイトの偽造</h1>
+            <h1>Revolutの偽造サイト</h1>
             <p class="gray_text">
                 練習のため作ったRevolutのサイトのコピーです。
                 ゼロからHTML、CSS、JSで作ったものです。 Revolutさん、お許しください！
@@ -326,7 +327,7 @@
         </section>
     </section>
 
-    <section>
+    <section id="tweets_section">
         <h2>これだけではありません</h2>
         <div id="tweets">
             <div class="tweet_card" id="tweet_1">
@@ -334,7 +335,7 @@
                     “私はよく旅行するので、Revolutで外貨両替手数料がかなりの額節約できました。”
                 </p>
                 <p>
-                    <span><i></i></span>
+                    <span><i></i>User1</span>
                 </p>
             </div>
 
@@ -343,14 +344,14 @@
                     “@RevolutAppを喜んで使用しています。FXでかなり貯金できること、それに優れた分析力。今後の旅費にはRevolutだけ利用します。”
                 </p>
                 <p>
-                    <span><i></i></span>
+                    <span><i></i>User2</span>
                 </p>
             </div>
 
             <div class="tweet_card" id="tweet_3">
                 <p>“日本に行っても@linuz90が僕に送金できたのはRevolutのお陰です”</p>
                 <p>
-                    <span><i></i></span>
+                    <span><i></i>User3</span>
                 </p>
             </div>
 
@@ -360,7 +361,7 @@
                     簡単に支払を友人と割り勘にしたり、お金を請求したり、オンライン購入用のバーチャルカードを作成したりできるんです”
                 </p>
                 <p>
-                    <span><i></i></span>
+                    <span><i></i>User4</span>
                 </p>
             </div>
 
@@ -369,7 +370,7 @@
                     “アメリカで2週間過ごした後、やっとイギリスに帰国しました。Revolutを初めて使用して感激しました。”
                 </p>
                 <p>
-                    <span><i></i></span>
+                    <span><i></i>User5</span>
                 </p>
             </div>
 
@@ -378,7 +379,7 @@
                     “@RevolutAppをお勧めします。海外のデビットカードを無料で、最高の為替レートで使用できます。”
                 </p>
                 <p>
-                    <span><i></i></span>
+                    <span><i></i>User6</span>
                 </p>
             </div>
         </div>
@@ -492,13 +493,13 @@
         <h2>
             Revolutのグローバルコミュニティに参加して、銀行を超えるサービスにアクセス
         </h2>
-        <div><img　id="map" src="assets/map.png" alt="" /></div>
+        <div id="map_div"><img src="assets/map.png" alt="" id="map"></div>
     </section>
 
     <section id="plans">
         <section id="basic">
             <p class="plan_type">スタンダード会員</p>
-            <h1>¥ 0 /m</h1>
+            <h1 class="price"> <span class="yen">¥</span> <span>0</span> <span class="per_month">/m</span></h1>
             <ul>
                 <li class="check_list">
                     <svg class="blue_tick" viewBox="0 0 14 10" fill="none">
@@ -536,9 +537,10 @@
                 <button class="btn black_btn">スタンダード会員になる</button>
             </div>
         </section>
+
         <section id="premium">
             <p class="plan_type">プレミアム会員</p>
-            <h1>¥ 980 /m</h1>
+            <h1 class="price"> <span class="yen">¥</span> <span>980</span> <span class="per_month">/m</span></h1>
             <ul>
                 <li class="check_list">
                     <svg class="blue_tick" viewBox="0 0 14 10" fill="none">
@@ -618,7 +620,7 @@
 
         <section id="metal">
             <p class="plan_type">メタル</p>
-            <h1>¥ 1800 /m</h1>
+            <h1 class="price"> <span class="yen">¥</span> <span>1800</span> <span class="per_month">/m</span></h1>
             <ul>
                 <li class="check_list">
                     <svg class="blue_tick" viewBox="0 0 14 10" fill="none">
@@ -693,7 +695,7 @@
         </section>
     </section>
 
-    <div id="footer">
+    <footer>
         <div>
             <div>
                 <div></div>
@@ -858,7 +860,7 @@
                     <div>
                         <div>
                             <div>
-                                <svg viewBox="0 0 24 24" size="24" color="#8B959E">
+                                <svg viewBox="0 0 24 24" width='24' height='24' color="#8B959E">
                                     <g fill="currentColor">
                                         <path fill="currentColor"
                                             d="M0 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2h-2c-1.48 0-2.773.804-3.465 2H8V4a1 1 0 0 0-2 0v1H3a1 1 0 0 0 0 2h5v3c0 .743-.358 1.57-1 2.353-.642-.783-1-1.61-1-2.353a1 1 0 0 0-2 0c0 1.366.63 2.644 1.525 3.706-.813.573-1.707.982-2.535 1.173-.538.124-.99.569-.99 1.121s.45 1.005.995.916c1.397-.23 2.826-.912 4.005-1.813.317.243.652.47 1 .675V19H2a2 2 0 0 1-2-2V3zM18.333 15L17 11l-1.333 4h2.666z">
@@ -869,7 +871,7 @@
                                     </g>
                                 </svg><span>日本語</span>
                             </div>
-                            <svg viewBox="0 0 24 24" color="#8B959E">
+                            <svg viewBox="0 0 24 24" width='24' height='24' color="#8B959E">
                                 <g fill="currentColor">
                                     <path fill="currentColor"
                                         d="M7.906 14.673a1.116 1.116 0 0 1-1.579-1.579l4.884-4.883a1.116 1.116 0 0 1 1.578 0l4.884 4.883a1.116 1.116 0 1 1-1.579 1.58L12 10.578l-4.094 4.094z">
@@ -880,15 +882,9 @@
                     </div>
                 </div>
             </div>
-            <div></div>
-            <div>
-                <p>
-                    <span><a>ウェブサイト利用規約</a><a>法的取り決め</a><a>プライバシーポリシー</a><a>苦情</a><a>責任ある開示プログラムに関する方針</a></span>
-                </p>
-            </div>
-            <div></div>
         </div>
-    </div>
+    </footer>
+
 </body>
 
 </html>
